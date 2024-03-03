@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+body{
+    background-color: #212121;
+}
+
+header{
+    background: url(Imagenes/Background-principal.jpg);
+}
+
+.superior{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.encabezado{
+    letter-spacing: 8px;
+    font-family: "Concert One", sans-serif;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 22px 0;
+}
+
+main{
+    background: url(Imagenes/mbackground.jpg);
+}
+
+.cuerpo{
+    width: 940px;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+.elementos{
+    text-align: center;
+}
+
+.elementos li{
+    display: inline-block;
+}
+
+.elementos .mensajes{
+    margin: 20px 2em;
+    width: 35%;
+}
+
+label{
+    letter-spacing: 1px;
+    font-family: "Concert One", sans-serif;
+    color: #0B1215;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+.mesajes{
+    width: 40%;
+}
+
+textarea{
+    background: snow;
+    font-family: "Madimi One", sans-serif;
+    width: 100%;
+    margin: 20px 0 6px 0;
+    border-radius: 8px;
+    height: 20em;
+    padding: 1em;
+    text-transform: uppercase;
+    font-size: 18px;
+    border: 0.5px solid black;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.elementos .medio{
+    width: 15%;
+    vertical-align: 5em;
+}
+
+#clave{
+    margin: 1.5em auto;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 16px;
+    border: black 1px solid;
+    text-align: center;
+    height: 46px;
+    width: 90%;
+}
+
+button{
+    font-size: 17px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    background-color: #444444;
+    cursor: pointer;
+    width: 95%;
+    height: 48px;
+    margin: 1.5em auto;
+    border: none;
+    border-radius: 16px;
+}
+
+button:hover{
+    transition: 1s;
+    background-color: #0B1215;
+    transform: scale(1.03);
+}
+
+.output{
+    position: relative;
+}
+
+#botonCopiar{
+    background-color: transparent;
+    background-image: url(Imagenes/Copying\ Square.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    bottom: 14px;
+    right: 7px;
+    padding: 0;
+    margin: 0;
+}
+
+#portapapeles{
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+footer{
+    background-color: #212121;
+}
+
+.tail{
+    margin: 0 auto;
+    width: 940px;
+    padding: 15px 1em;
+}
+
+a{
+    font-family: "Madimi One", sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    margin: 0 12px;
+}
+
+a:hover{
+    color: #FDD017;
+    transition: 0.8s;
+}
+
+.tail img{
+    vertical-align: bottom;
+    margin: 0 8px;
+    height: 20px;
+}
+
+.about{
+    margin: 0 0 0 25%;
+}

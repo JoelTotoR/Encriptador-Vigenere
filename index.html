@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style-principal.css">
+        <title>Encriptador Vigenère</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="superior">
+                <h1 class="encabezado">Encriptador</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="cuerpo">
+                <ul class="elementos">
+                    <li class="mensajes">
+                        <label for="mensaje">Tu mensaje</label>
+                        <textarea id="mensaje" placeholder="Escribelo aqui:" required></textarea>
+                    </li>
+
+                    <li class="medio">
+                        <input id="clave" type="text" placeholder="Clave" maxlength="8" required>
+                        <button id="botonEncriptar" onclick="encriptar();">Encriptar</button>
+                        <button id="botonDesencriptar" onclick="desencriptar();">Desencriptar</button>
+                    </li>
+
+                    <li class="mensajes">
+                        <div class="output">
+                            <label for="mensajeSalida">Resultado</label>
+                            <textarea id="mensajeSalida" disabled placeholder="Mensaje obtenido"></textarea>
+                            <button id="botonCopiar" onclick="copiarMensaje();" disabled></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <div class="tail">
+                <a class="miGuthub" href="https://github.com/JoelTotoR"><img src="Imagenes/github white.png">Github</a>
+                <a class="milinkedin" href="https://www.linkedin.com/in/joel-toto-r/"><img src="Imagenes/linkedin white.png">Linkedin</a>
+                <a class="miInsta" href="https://www.instagram.com/toto._.p0?igsh=YzljYTk1ODg3Zg=="><img src="Imagenes/instagram1.png">Instagram</a>
+                <a class="miFB" href="https://www.facebook.com/profile.php?id=100005125908086&mibextid=ZbWKwL"><img src="Imagenes/facebook1.png">Facebook</a>
+                <a class="about" href="https://www.ugr.es/~anillos/textos/pdf/2011/EXPO-1.Criptografia/02a11.htm#:~:text=El%20cifrado%20Vigen%C3%A8re%20es%20un,se%20ha%20reinventado%20muchas%20veces.">Acerca del cifrado</a>
+            </div>
+        </footer>
+
+    </body>
+    <script src="encriptador.js"></script>
+</html>
