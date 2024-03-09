@@ -189,7 +189,7 @@ p{
     text-decoration: wavy;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:980px){
     .encabezado{
         font-size: 4em;
         padding: 0.5em;
