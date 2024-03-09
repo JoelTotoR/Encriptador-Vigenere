@@ -21,7 +21,7 @@ header{
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 2.4em;
     padding: 22px 0;
 }
 
@@ -52,8 +52,8 @@ label{
     letter-spacing: 1px;
     font-family: "Concert One", sans-serif;
     color: #0B1215;
-    text-transform: uppercase;
-    font-size: 26px;
+    text-transform: capitalize;
+    font-size: 28px;
 }
 
 .mesajes{
@@ -64,26 +64,33 @@ textarea{
     background: snow;
     font-family: "Madimi One", sans-serif;
     width: 100%;
-    margin: 20px 0 6px 0;
+    margin: 10px 0 6px 0;
     border-radius: 8px;
     height: 20em;
     padding: 1em;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 18px;
     border: 0.5px solid black;
     resize: none;
     box-sizing: border-box;
 }
 
+.info{
+    padding: 2px 0;
+    background-color: #0B1215;
+    margin: 0;
+    color: white;
+}
+
 .elementos .medio{
-    width: 15%;
+    width: 14%;
     vertical-align: 5em;
 }
 
 #clave{
     margin: 1.5em auto;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 16px;
     border-radius: 16px;
     border: black 1px solid;
@@ -168,5 +175,91 @@ a:hover{
 }
 
 .about{
-    margin: 0 0 0 25%;
+    right: 10px;
+}
+
+p{
+    padding: 20px 0;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    text-decoration: wavy;
+}
+
+@media screen and (max-width:480px){
+    .encabezado{
+        font-size: 4em;
+        padding: 0.5em;
+    }
+
+    label{
+        font-size: 3em;
+    }
+
+    textarea{
+        font-size: 2.6em;
+        height: 14em;        
+    }
+
+    .elementos li{
+        display: inline;
+    }
+
+    #clave{
+        height: 2.6em;
+        font-size: 1.8em;
+        margin: 1.6em 20px 0 0;
+        width: 30%;
+    }
+
+    button{
+        font-size: 1.8em;
+        height: 2.6em;
+        margin: 1em 20px 0 0;
+        width: 30%;   
+    }
+
+    #botonCopiar{
+        background-color: transparent;
+        background-size: 50px;
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        bottom: 25px;
+        right: 17px;
+    }
+    
+    #portapapeles{
+        position: relative;
+        bottom: 35px;
+        left: 35px;
+        max-width: 50px;
+        max-height: 50px;
+    }
+    
+    .info{
+        font-size: 1.1em;
+        margin: 10px auto;
+        position: static;
+    }
+
+    .tail img{
+        height: 28px;
+    }
+
+    a{
+        font-size: 1.2em;
+    }
+
+    .about{
+        position: absolute;
+        right: 1em;
+    }
+
+    p{
+        font-size: 1em;
+    }
 }

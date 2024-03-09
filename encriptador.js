@@ -10,6 +10,14 @@ function obtenerClave(){
 }
 
 function validar(clave, mensaje){
+    for (var i = 0; i < clave.length; i++){
+        let asciiClave = clave.charCodeAt(i);
+        if (asciiClave < 97 || asciiClave > 122){
+            alert("La clave de encriptado solo debe contener letras")
+            return false;
+        }
+    }
+
     if (clave === "" || mensaje === ""){
         alert(`Porfavor ingresa ${(clave === "") ? "la clave":"un mensaje"}`);
         return false;
@@ -20,8 +28,8 @@ function validar(clave, mensaje){
 
 function encriptar(){
     let mensajeCifrado = "";
-    mensajeUsuario = obtenerMensaje().toUpperCase();
-    clave = obtenerClave().toUpperCase();
+    mensajeUsuario = obtenerMensaje().toLowerCase();
+    clave = obtenerClave().toLowerCase();
 
     // Comprobar que se hayan ingresado los parametros de la encriptación
     if (validar(clave, mensajeUsuario)){
@@ -30,11 +38,11 @@ function encriptar(){
         // Recorrer la cadena
         for (var i = 0; i < mensajeUsuario.length; i++) {
             let asciiMensaje = mensajeUsuario.charCodeAt(i);
-            
+
             // Cifrar los valores que esten en el alfabeto (Inglés)
-            if (asciiMensaje >= 65 && asciiMensaje <= 90) {
+            if (asciiMensaje >= 97 && asciiMensaje <= 122) {
                 let asciiClave = clave.charCodeAt(claveIndex % clave.length);
-                let asciiCifrado = ((asciiMensaje - 65) + (asciiClave - 65)) % 26 + 65;
+                let asciiCifrado = ((asciiMensaje - 97) + (asciiClave - 97)) % 26 + 97;
                 mensajeCifrado += String.fromCharCode(asciiCifrado);
                 claveIndex++;
             } else {
@@ -50,8 +58,8 @@ function encriptar(){
 
 function desencriptar(){
     let mensajeDescifrado = ""
-    mensajeUsuario = obtenerMensaje().toUpperCase();
-    clave = obtenerClave().toUpperCase();
+    mensajeUsuario = obtenerMensaje().toLowerCase() ;
+    clave = obtenerClave().toLowerCase();
 
     // Comprobar que se hayan ingresado los parametros de la encriptación
     if (validar(clave, mensajeUsuario)){
@@ -62,9 +70,9 @@ function desencriptar(){
             let asciiCifrado = mensajeUsuario.charCodeAt(i);
             
             // Cifrar los valores que esten en el alfabeto (Inglés)
-            if (asciiCifrado >= 65 && asciiCifrado <= 90) {
+            if (asciiCifrado >= 97 && asciiCifrado <= 122) {
                 let asciiClave = clave.charCodeAt(claveIndex % clave.length);
-                let asciiDescifrado = ((asciiCifrado - 65) - (asciiClave - 65) + 26) % 26 + 65;
+                let asciiDescifrado = ((asciiCifrado - 97) - (asciiClave - 97) + 26) % 26 + 97;
                 mensajeDescifrado += String.fromCharCode(asciiDescifrado);
                 claveIndex++;
             } else {
